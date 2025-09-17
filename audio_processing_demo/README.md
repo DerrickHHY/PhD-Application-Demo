@@ -7,7 +7,7 @@ When using Python's _SpeechRecognition_ package for automatic audio transcriptio
 
 Program demonstration:
 
-[https://github.com/DerrickHHY/PhD-Application-Demo/issues/2#issue-3426423439](https://github.com/user-attachments/assets/180c43cd-f2d2-4d5a-b895-2d1fac91cf3a)
+[[https://github.com/DerrickHHY/PhD-Application-Demo/issues/2#issue-3426423439](https://github.com/user-attachments/assets/180c43cd-f2d2-4d5a-b895-2d1fac91cf3a)](https://github.com/user-attachments/assets/9087f3be-edc5-4b72-9897-dcf9da0fdd9d)
 
 Note: Not all code was produced entirely by myself! LLM Deepseek provided significant assistance, including recommendations for suitable packages, necessary double-checking, debugging support, and interpretation of fundamental code.
 
