@@ -26,9 +26,9 @@
 
 <p align="center">
   <img src="./Image/classification_PCA.png" height="150" style="margin:10px;">
-  <img src="./Image/classification_Amodel.png" style="margin:10px;">
+  <img src="./Image/classification_Amodel.png" height="150" style="margin:10px;">
 </p>
-
+——————————————————————————————————————————————————————————
 <img src="./Image/classification_PCA.png" width="50%">
 <img src="./Image/classification_Amodel.png" width="50%">
 
