@@ -1,8 +1,8 @@
 # Ergonomic Data sample
 
-## ***Purpose of the Program Design:***
+## ***数据说明:***
 
-One of the experiments, I resposible for, contained dual N-back assessment, which required participants to complete the task using both keyboard responses and verbal responses. As a result, each participant generates a large number of short audio files (each condition produces 6 clocks × 40 trials of audio data, with 40 participants and 2 conditions per participant). Even though, before the task begins, I repeatedly remind participants to provide clear and loud verbal responses for each trial, some may forget this requirement during the high-cognitive-load task, leading to poor audio quality.
+这些数据是我在XREAL作为人体工学工程师收集并处理的Ergonomic Data的样本。原始数据由扫描上百名志愿者的扫描电子模型组成，包括亚洲人与非亚洲人。数据收集的初衷为AR眼镜的外形设计提供Ergonomic参考，例如鼻梁范围，鼻托活动范围，耳眼距离，两耳距离等。原始数据最终全部通过标点与数据提取（by Python）目标数据，最终生成目标数据报告与平局模型。这些数据与报告仍然被用于XREAL的设计参考。出于数据归属权和版权原因，此岩本仅会展示部分数据展示的图片以及全部由我个人完成的数据提取脚本。展示过程中出现的任何个人模型或者人像，均是我本人的人像资料，不会涉及任何数据志愿者的隐私。注：若存在任何侵权或法律问题，请联系我以删除此展示。
 
 When using Python's *SpeechRecognition* package for automatic audio transcription, many low-quality audio files cannot be recognized and are therefore labeled as "*UNKNOWN*". To ensure data quality, this program was developed to facilitate manual cross-checking of the automated transcription results.
 
