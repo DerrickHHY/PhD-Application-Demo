@@ -29,4 +29,3 @@
 <p align="center">
   <img src="[https://example.com/image.png](https://github.com/user-attachments/assets/b65ccb54-1374-4f0c-bace-0367c74ac320)" width="50%">
 </p>
-![Image text](https://github.com/user-attachments/assets/b65ccb54-1374-4f0c-bace-0367c74ac320)
