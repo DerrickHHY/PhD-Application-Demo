@@ -26,6 +26,6 @@
 
 ### ***Step 4 直接的设计建议***
 当然，leader也期望我直接给出一切建议，而不仅仅是给出关键的特征数据与模型。不过我并不具备工业设计和眼镜设计的相关知识，因此我也并不确定部分设计建议是否恰当。这部分的例子是，我通用上述的关于鼻子的角度范围，给出AR眼镜鼻托必要的可活动范围。
-<p align="center">
-  <img src="[https://example.com/image.png](https://github.com/user-attachments/assets/b65ccb54-1374-4f0c-bace-0367c74ac320)" width="50%">
-</p>
+
+<img src="[https://example.com/image.png](https://github.com/user-attachments/assets/b65ccb54-1374-4f0c-bace-0367c74ac320)" width="50%">
+
