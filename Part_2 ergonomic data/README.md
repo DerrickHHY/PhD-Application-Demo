@@ -1,32 +1,31 @@
 # Ergonomic Data sample
 
-## ***Purpose of the Program Design:***
+## ***说明:***
 
-One of the experiments, I resposible for, contained dual N-back assessment, which required participants to complete the task using both keyboard responses and verbal responses. As a result, each participant generates a large number of short audio files (each condition produces 6 clocks × 40 trials of audio data, with 40 participants and 2 conditions per participant). Even though, before the task begins, I repeatedly remind participants to provide clear and loud verbal responses for each trial, some may forget this requirement during the high-cognitive-load task, leading to poor audio quality.
+这些数据是我在XREAL作为人体工学工程师收集并处理的Ergonomic Data的样本。原始数据由扫描上百名志愿者的扫描电子模型组成，包括亚洲人与非亚洲人。数据收集的初衷为AR眼镜的外形设计提供Ergonomic参考，例如head breadth，Nasal root width，Alar slop angles，distance between tragion and cornea. etc。原始数据最终全部通过面部landmark 标记与数据提取（by Python）目标数据，最终生成目标数据报告与平局模型。这些数据与报告仍然被用于XREAL的设计参考。出于数据归属权和版权原因，此数据样本仅会展示部分数据展示的图片以及全部由我个人完成的数据提取脚本。展示过程中出现的任何个人模型或者人像，均是我本人的人像资料，不会涉及任何数据志愿者的隐私。注：若存在任何侵权或法律问题，请联系我以删除此展示。
 
-When using Python's *SpeechRecognition* package for automatic audio transcription, many low-quality audio files cannot be recognized and are therefore labeled as "*UNKNOWN*". To ensure data quality, this program was developed to facilitate manual cross-checking of the automated transcription results.
+ "*UNKNOWN*"
 
-Program demonstration:
+![Image text](https://github.com/user-attachments/assets/b65ccb54-1374-4f0c-bace-0367c74ac320)
 
-[https://github.com/user-attachments/assets/9087f3be-edc5-4b72-9897-dcf9da0fdd9d](https://github.com/user-attachments/assets/9087f3be-edc5-4b72-9897-dcf9da0fdd9d)
+## ***Raw Data Sample:***
 
-Note: Not all code was produced entirely by myself! LLM Deepseek provided significant assistance, including recommendations for suitable packages, necessary double-checking, debugging support, and interpretation of fundamental code.
+所有的原始数据都是通过3D扫描仪器对志愿者完成头部的扫面。扫描过程中会通过物理的方式完成一些矫正，以弥补深度摄影机制的本质缺陷，例如耳根与头部相连处的深度信息失真。所有的原始头模都经过我个人的矫正与处理，包括水平校准，坐标系对其，关键面部landmark 标定，移除无关信息等。样板头模的图如下，3D文件信息可见XXfile中的XX文件。
 
-## ***Requirements:***
+## ***数据处理流程:***
 
-The corresponding Python version and package requirements for the compatible version are provided in the *requirements.txt* file.
+公司内并没有相关人士提供指导，所以我只能根据文献中的方法学来建立我自己的工作流，文献涉及ergonomics and anthropometry。这一部分会通过图片和部分文件展示我的数据提取工作流。选3D模型的鼻子数据为例子，因为这个部位与AR眼睛的舒适度紧密相关。当然这部分工作也包含其他对于AR眼睛设计重要的面部位置。
+### ***Step 1 手动标点***
+首先会人工标记所有头模的关键点位。每个头模都会通过手动的方式定位19个landmark在鼻子上，也就是下图中呈现的19个锥形。这个手动过程是一个很繁重的任务。在最开始每个模型的标点都会花费我30小时以上的时间。但这样是有意义的，在当时确实避免很多特殊鼻形导致的数据失真。或许现在我会尝试更聪明的自动化或者机器学习的方法。不过在当时，这就是我个人最容易实现且误差最小的方法了。
+![Image text] 带有三角得鼻图像
+### ***Step 2 特征数据***
+通过提取步骤一中的landmark的坐标，可以计算很多的鼻子的特征数据，例如宽度，高度，倾斜，锋利程度等。这些数据的直观显示也呈现于上图.随后通过PCA来分类这些数据，以提供鼻子形状的分类模式或锁定亚洲人与外国人的鼻形差异的关键特征。当然，也可以通过简单的百分比方式生成平均模型如下图。这个阶段生成得分类模型虽然比较粗糙，但是可视化很多关键的特征，这为后续的工作方向提供了预览。
+![Image text] PCA示例图还有三个鼻子得简单分类生成
+### ***Step 3 平均头模***
+根据第二步中的数据报告，我们划定一个自动坐标抓取的范围，包含所有关键的特征信息。与手动标记不同，这次在范围能更密集得抓取模型的点坐标，这可以帮助我们生成更平滑的平均头模，并且包含所有我们认为重要的特征。根据分类模式我们可以选取感兴趣的分类的子数据集（例如亚洲人或者尖鼻子的人），随后生成各个子集的平均头模。可以见下图。这样的平衡模型可以通过3D打印，给眼镜结构设计师提供更直接的参考。自动抓取的坐标的脚本可以见XXfile中的XX文件。（注，考虑到脚本中包含数据关键的信息，因此脚本展示选取了不重要部位（额头部位）的脚本以展示抓取逻辑）。
 
-## ***Sample Data:***
+### ***Step 4 直接的设计建议***
+当然，leader也期望我直接给出一切建议，而不仅仅是给出关键的特征数据与模型。不过我并不具备工业设计和眼镜设计的相关知识，因此我也并不确定部分设计建议是否恰当。这部分的例子是，我通用上述的关于鼻子的角度范围，给出AR眼镜鼻托必要的可活动范围。
 
-For those who wish to run the relevant code, I have provided real suitable data in the *Sample\_data/N6/CS* directory. All audio data comes from myself (HUANG Hongyi) and replicates the poor audio quality scenarios encountered in the actual experimental data (though sometimes it can be even worse in practice).
-
-## ***Processing Steps:***
-
-All procedures can be completed within the ***\_\_mian\_\_transcript.py*** file. The entire workflow can be customized by adjusting the *auto\_transcription* and *human\_processing* parameters. For demonstration purposes, the current default parameter settings in the file will immediately enter the manual checking process after automatic transcription. In previous data processing, I would complete these steps sequentially: first performing automatic transcription on all data, then conducting manual verification altogether. This workflow arrangement is because the automatic transcription process for each participant's audio files (336 files) requires considerable time, approximately 10 minutes.
-
-The manual checking process can be seen in the demo video. When opening the integrated audio data table for a specific condition of a participant, the first 1/4 of files are displayed in green, indicating they are from visual condition trials with no audio recording. The remaining 3/4 of files appear in either white or red. White represents audio files with satisfactory transcription quality that require no manual verification, while red indicates files with poor transcription quality that need manual processing.
-
-For processing specific files, users can click on the filename (second column) to open both a visualization window (right side) and a content input window (left side). The visualization window displays the waveform of the audio file along with automatically detected reaction time (RT) (shown as green vertical lines in the waveform). Users can drag the green line to recalibrate the RT measurement. The audio can also be played by clicking the play button to facilitate manual checking of the audio content. After confirming the audio content, users can click the corresponding option in the input window to complete the manual processing for that file.
-
-Once all files requiring processing have been addressed, the interface will show only green and white files. At this point, users can click the "*Export Full Data*" button in the upper left corner to export all audio data for one condition of one participant.
+<img src="[https://example.com/image.png](https://github.com/user-attachments/assets/b65ccb54-1374-4f0c-bace-0367c74ac320)" width="50%">
 
