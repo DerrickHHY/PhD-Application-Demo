@@ -24,6 +24,11 @@
 通过提取步骤一中的landmark的坐标，可以计算很多的鼻子的特征数据，例如宽度，高度，倾斜，锋利程度等。这些数据的直观显示也呈现于上图.随后通过PCA来分类这些数据，以提供鼻子形状的分类模式或锁定亚洲人与外国人的鼻形差异的关键特征。当然，也可以通过简单的百分比方式生成平均模型如下图。这个阶段生成得分类模型虽然比较粗糙，但是可视化很多关键的特征，这为后续的工作方向提供了预览。
 ![Image text] PCA示例图还有三个鼻子得简单分类生成
 
+<p align="center">
+  <img src="./Image/classification_PCA.png" height="150" style="margin:10px;">
+  <img src="./Image/classification_Amodel.png" style="margin:10px;">
+</p>
+
 <img src="./Image/classification_PCA.png" width="50%">
 <img src="./Image/classification_Amodel.png" width="50%">
 
