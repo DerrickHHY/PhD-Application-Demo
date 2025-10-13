@@ -25,8 +25,8 @@
 ![Image text] PCA示例图还有三个鼻子得简单分类生成
 
 <p align="center">
-  <img src="./Image/classification_PCA.png" height="150" style="margin:10px;">
-  <img src="./Image/classification_Amodel.png" height="150" style="margin:10px;">
+  <img src="./Image/classification_PCA.png" height="250" style="margin:10px;">
+  <img src="./Image/classification_Amodel.png" height="250" style="margin:10px;">
 </p>
 ——————————————————————————————————————————————————————————
 <img src="./Image/classification_PCA.png" width="50%">
