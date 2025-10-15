@@ -29,3 +29,6 @@ Upon completion of the search phase, a randomly assembled set of memory question
 ## ***Benefits of Video-Game Paradigm***
 
 The video game-based searching paradigm offers several advantages: 1) allowing comprehensive recording of all visual stimuli presented to participants; 2) it supporting randomization of parameters, including scene configurations and spatial locations; 3) accommodating diverse memory tasks, including search, location recall, and change discrimination tasks; 4) striking a balance between portability and naturalism—being more ecologically valid than static image viewing, more portable than VR-based experiments, and more controllable and easier to record than real-world scenarios; and 5) being able to approximate individuals’ eye moments to some extent, as a first-person view interaction. 
+
+## ***Assistance and Reference***
+The interaction logic and code referenced a YouTube tutorial by CodeMonkey (https://unitycodemonkey.com/), with assistance from LLMs (DeepSeek & Grok) during the process. Additionally, open-source Unity resources from VNB were used while setting up the scene.
