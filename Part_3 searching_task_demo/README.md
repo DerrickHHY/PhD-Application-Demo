@@ -10,7 +10,7 @@ Video demonstration:
 
 Note: Not all code was produced entirely by myself! LLM Deepseek provided significant assistance, including recommendations for suitable packages, necessary double-checking, debugging support, and interpretation of fundamental code.
 
-## ***Detialed Illustration for Searching Paradigm***
+## ***Detialed Illustration for Searching Paradigm:***
 
 Participants will be advised to use their daily mobile phones for each testing session, while the use of tablets or external displays will be discouraged. The display resolution/aspect ratio of each trial will be fixed at 1280 × 720 (720P; a common resolution for landscape-oriented games) and adapted to devices with varying resolutions using a "show_all" strategy. This means that the interface will be scaled isotropically to display all rendered content, with any unused areas filled by a plain, non-informative background. This setup ensures that the visual information available from the virtual character’s perspective remains consistent across participants. One uncontrolled variable is the variation in screen sizes among commercially available mobile phones, which range from approximately 5.4 inches (e.g., iPhone 13 mini) to 8.0 inches (e.g., Galaxy Z Fold7). Another uncontrolled factor is screen brightness, which depends on participants’ habitual device settings and ambient lighting conditions. Participants will be advised to complete the trials indoors under appropriate lighting conditions. Fortunately, according to the composite model proposed by Nuthmann (2017), luminance and luminance contrast have relatively limited influence on guiding attention allocation. 
 
@@ -18,7 +18,7 @@ Prior to initiating each trial, participants are required to tap the screen to c
 
 Participants are initially placed at a random location within a specific 3D scene. The initial viewpoint is consistently set at eye level and oriented toward the farthest corner, preventing the initial view from facing the corner. Movement along the X-Y-Z axes is controlled via a virtual joystick in the lower left corner, whereas view rotation around the X-Y-Z axes (viewpoint manipulation) is enabled by a virtual joystick in the lower right corner. Each scene is confined within explicit boundaries measuring 12×8×6 in-game voxels (for reference, the virtual character is 1×1×1 voxels). Participants will be tasked with searching for the target object (as cues presented at trial onset) and tapping it on the screen. If the tapped object is the target object, the trial terminates immediately. If the participant does not find and tap the target object within a 45-second time limit, the trial terminates at 45 seconds. 
 
-## ***Entire Plan for Searching Paradigm***
+## ***Entire Plan for Searching Paradigm:***
 
 This demo only shows a scene. The entire plan of this searching paradigm contains 100 scenes (10 themes × 50 object-configurations).
 
@@ -26,7 +26,7 @@ Each scene contains a specific theme, object set, and object placement. Selectab
 
 Upon completion of the search phase, a randomly assembled set of memory questions is presented, which may include target object recognition, non-target object recognition, scene functionality application, and free-recall tasks. Each question is subject to a 30-second time limit. The composition of post-search questions is randomized, to prevent participants from using process-of-elimination strategies to enhance accuracy. The total duration of each trial is approximately 2 min. Notably, compared to traditional methodologies, the database is highly randomized. To effectively validate the *comprehensive visual memory computaioinal model* in this study, variable design will be considered according to the following process: 1) cue presentation varying with ambiguity, form, and presentation time (Malcolm & Henderson, 2009); 2) target object selection considering scene priors, saliency, saliency, size, etc.; 3) object configurations within scenes considering scene priors, semantic binding, density, etc. 
 
-## ***Benefits of Video-Game Paradigm***
+## ***Benefits of Video-Game Paradigm:***
 
 The video game-based searching paradigm offers several advantages: 1) allowing comprehensive recording of all visual stimuli presented to participants; 2) it supporting randomization of parameters, including scene configurations and spatial locations; 3) accommodating diverse memory tasks, including search, location recall, and change discrimination tasks; 4) striking a balance between portability and naturalism—being more ecologically valid than static image viewing, more portable than VR-based experiments, and more controllable and easier to record than real-world scenarios; and 5) being able to approximate individuals’ eye moments to some extent, as a first-person view interaction. 
 
