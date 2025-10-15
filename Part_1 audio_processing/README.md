@@ -10,9 +10,6 @@ Program demonstration:
 
 Note: Not all code was produced entirely by myself! LLM Deepseek provided significant assistance, including recommendations for suitable packages, necessary double-checking, debugging support, and interpretation of fundamental code.
 
-## ***Requirements:***
-The corresponding Python version and package requirements for the compatible version are provided in the _requirements.txt_ file.
-
 ## ***Sample Data:***
 For those who wish to run the relevant code, I have provided real suitable data in the _Sample_data/N6/CS_ directory. All audio data comes from myself (HUANG Hongyi) and replicates the poor audio quality scenarios encountered in the actual experimental data (though sometimes it can be even worse in practice).
 
