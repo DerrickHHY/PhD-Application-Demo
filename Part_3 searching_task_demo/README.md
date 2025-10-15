@@ -1,4 +1,4 @@
-# Semi-automated manual audio cross-checking
+# Visual Searching Paradigm for QCE
 
 To achieve the Visual Memory Queci-Comprehensive Exploration (QCE or CE) study, proposed by Prof. Huang Liqiang, my research plan employs an online video-game visual searching paradigm to construct a large-scale dataset. Part 3 is set to show the current video demonstration and project files.
 
