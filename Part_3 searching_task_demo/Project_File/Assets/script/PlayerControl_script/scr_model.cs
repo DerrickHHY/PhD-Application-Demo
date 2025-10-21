@@ -1,4 +1,4 @@
-using System; // 这里从using System.Collections修改为using System
+using System; 
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -18,9 +18,7 @@ public static class scr_model
     #endregion
 
     #region -Interaction Events-
-    /// <summary>
-    /// 交互事件参数
-    /// </summary>
+
     [Serializable]
     public class ObjectInteractionEventArgs : EventArgs
     {
@@ -34,33 +32,27 @@ public static class scr_model
         }
     }
 
-    /// <summary>
-    /// 交互事件管理器
-    /// </summary>
+
     public static class InteractionEvents
     {
-        // 物体被触碰/检测到时广播
+
         public static event EventHandler<ObjectInteractionEventArgs> OnObjectInteracted;
 
-        // 具体交互执行时广播（如按E键）
+
         public static event EventHandler<ObjectInteractionEventArgs> OnObjectInteractionPerformed;
 
-        /// <summary>
-        /// 广播物体被检测到
-        /// </summary>
+
         public static void BroadcastObjectDetection(string objectName, GameObject obj = null)
         {
             OnObjectInteracted?.Invoke(null, new ObjectInteractionEventArgs(objectName, obj));
-            // Debug.Log($"[Event] Broadcast: {objectName}");
+
         }
 
-        /// <summary>
-        /// 广播交互执行
-        /// </summary>
+
         public static void BroadcastInteractionPerformed(string objectName, GameObject obj = null)
         {
             OnObjectInteractionPerformed?.Invoke(null, new ObjectInteractionEventArgs(objectName, obj));
-            // Debug.Log($"[Event] Interaction Performed: {objectName}");
+
         }
     }
     #endregion
@@ -69,7 +61,7 @@ public static class scr_model
     [Serializable]
     public class GameEndEventArgs : EventArgs
     {
-        public bool SearchResult { get; private set; }  // true=成功找到目标, false=自然超时
+        public bool SearchResult { get; private set; }  
         
         public GameEndEventArgs(bool searchResult)
         {

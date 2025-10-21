@@ -9,13 +9,13 @@ public class UIControl : MonoBehaviour
     public System.Action<bool> OnPanelStateChanged;
     [Header("UI Panel Setting")]
     public CanvasGroup PanelInteract;
-    // Start is called before the first frame update
+
     void Start()
     {
         if (PanelInteract != null)
         {
             SetPanelVisibility(true);
-            isPanelVisible = true; // 同步初始状态
+            isPanelVisible = true; 
         }
 
         if (PanelInteract != null && PanelInteract.GetComponentInChildren<UnityEngine.UI.Button>() == null)
@@ -25,7 +25,7 @@ public class UIControl : MonoBehaviour
 
     }
 
-    // Update is called once per frame
+
     void Update()
     {
 
@@ -47,7 +47,7 @@ public class UIControl : MonoBehaviour
             isToggleEnabled = false;
             Debug.Log("TogglePanel function has been baned");
 
-            // 通知状态变化
+
             OnPanelStateChanged?.Invoke(!isVisible);
 
 
@@ -61,13 +61,9 @@ public class UIControl : MonoBehaviour
         PanelInteract.alpha = isVisible ? 1f : 0f;
         PanelInteract.interactable = isVisible;
         PanelInteract.blocksRaycasts = isVisible;
-        isPanelVisible = isVisible; // 更新内部状态
+        isPanelVisible = isVisible; 
     }
     
-    // public bool GetPanelVisibleState()
-    // {
-    //     return isPanelVisible;
-    // }
-    
+
     
 }

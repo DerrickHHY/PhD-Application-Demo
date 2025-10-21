@@ -32,7 +32,6 @@ public class BroadcastControl : MonoBehaviour
     {
         if (!string.IsNullOrEmpty(e.objectName))
         {
-            // 显示 UI
             SetPanelVisibility(true);
             string cleanName = CleanObjectName(e.objectName);
             objectNameText.text = cleanName;
@@ -42,12 +41,7 @@ public class BroadcastControl : MonoBehaviour
 
             
         }
-        // else
-        // {
-        //     // 隐藏 UI
-        //     SetPanelVisibility(false);
-        //     Debug.Log("UI: Hidden");
-        // }
+
     }
     private string CleanObjectName(string dirtyName)
     {
@@ -57,15 +51,13 @@ public class BroadcastControl : MonoBehaviour
 
         string pattern = @"\s*\([^)]*\)$";
         string step1 = Regex.Replace(dirtyName, pattern, "").Trim();
-        // 去除多余的前后空格
+
         step1 = step1.Trim();
-        // 第2步：替换下划线为空格
+
         string step2 = step1.Replace("_", " ");
 
-        // 第3步：每个单词首字母大写
         string cleanName = ToTitleCase(step2);
 
-        // 如果清理后为空，返回原始名称（防止误删）
         return string.IsNullOrEmpty(cleanName) ? dirtyName : cleanName;
     }
     private string ToTitleCase(string input)
@@ -73,7 +65,6 @@ public class BroadcastControl : MonoBehaviour
         if (string.IsNullOrEmpty(input))
             return input;
 
-        // 使用 CultureInfo 创建 TextInfo，支持本地化标题格式
         TextInfo textInfo = new CultureInfo("en-US", false).TextInfo;
         return textInfo.ToTitleCase(input.ToLower());
     }
@@ -84,7 +75,6 @@ public class BroadcastControl : MonoBehaviour
     }
     private IEnumerator HideAfterDelay()
     {
-        // 等待延迟时间
         yield return new WaitForSecondsRealtime(broadcastHideDelay);
 
         // SetPanelVisibility(false);
