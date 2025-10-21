@@ -1,4 +1,4 @@
-# Ergonomic Data sample
+# Ergonomic Data Sample
 
 This is a sample of ergonomic data that I collected and processed while I served as Ergonomics Engineer at XREAL. The original data was derived from 3D scans of around one hundred volunteers, including both Asian and non-Asian individuals. The purpose of the data collection was to provide ergonomic references for the design of AR glasses, especially regarding the essential  metrics such as head breadth, nasal root width, alar slope angles, and the distance between the tragion and cornea, among others.
 
